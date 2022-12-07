@@ -10,7 +10,7 @@ app.set("views", "views");
 
 // index page
 app.get("/", function (req, res) {
-  res.render("pages/index.ejs");
+  res.render("pages/index");
   //   res.send("hello");
 });
 
