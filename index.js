@@ -1,16 +1,17 @@
 var express = require("express");
 var app = express();
 const router = express.Router();
+const path = require("path");
 
 // set the view engine to ejs
-app.use(express.static("public"));
+app.use(express.static(path.join("public")));
 app.set("view engine", "ejs");
-app.set("views", "views");
+app.set("views", path.join(__dirname, "views"));
 
 // use res.render to load up an ejs view file
 
 // index page
-router.get("/", function (req, res) {
+app.get("/", function (req, res) {
   res.render("pages/index.ejs");
   //   res.send("hello");
 });
