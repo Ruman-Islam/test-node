@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 
 // set the view engine to ejs
-app.use(express.static("public"));
+app.use(express.static("views"));
 app.set("view engine", "ejs");
 app.set("views", "views");
 
