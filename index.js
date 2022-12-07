@@ -8,8 +8,8 @@ app.set("view engine", "ejs");
 
 // index page
 app.get("/", function (req, res) {
-  //   res.render("index");
-  res.send("hello");
+  res.render("index");
+  //   res.send("hello");
 });
 
 app.listen(5000);
